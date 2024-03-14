@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neutral-100: 191, 191, 191;
+    --neutral-200: 158, 154, 167;
+    --neutral-300: 53, 50, 62;
+    --neutral-400: 35, 33, 39;
+    --primary: 42, 207, 207;
+    --accent: 59, 48, 84;
+    --error: 244, 98, 98;
+  }
+}
