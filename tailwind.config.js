@@ -26,9 +26,12 @@ export default {
         300: withOpacity("--neutral-300"),
         400: withOpacity("--neutral-400"),
       },
+      white: withOpacity("--white"),
+      black: withOpacity("--black"),
       primary: withOpacity("--primary"),
       accent: withOpacity("--accent"),
       error: withOpacity("--error"),
+      transparent: "transparent",
     },
     extend: {},
   },
@@ -38,5 +41,6 @@ export default {
         html: { fontSize: "18px" },
       })
     ),
+    "prettier-plugin-tailwindcss",
   ],
 };
