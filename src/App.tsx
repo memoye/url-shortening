@@ -4,7 +4,7 @@ import Home from "./pages/home";
 
 function App() {
   return (
-    <div className="min-h-svh bg-neutral-100/20">
+    <div className="min-h-svh bg-neutral-100/20 max-w-[1440px] mx-auto">
       <Header />
       <div className="h-20 bg-white" />
       <Home />

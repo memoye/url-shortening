@@ -30,10 +30,17 @@ const URLCard: React.FC<URLCardProps> = ({ url, shortened }) => {
         <a
           href={shortened}
           target="_blank"
-          className={`${urlStyle} text-primary`}
+          className={`${urlStyle} text-primary relative`}
           title="Visit URL"
         >
           {shortened}
+          {
+            <span
+              className={`absolute left-1/2 duration-500 ease-in -translate-x-1/2 ${copied ? "transition-all opacity-0 scale-110 -translate-y-20 " : " transition-none"}`}
+            >
+              {shortened}
+            </span>
+          }
         </a>
 
         <Button

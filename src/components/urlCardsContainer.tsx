@@ -19,7 +19,7 @@ const URLCardsContainer = () => {
   return (
     <section
       id="resources"
-      className="max-w-screen-lg mx-auto px-4 lg:px-0 flex flex-col gap-4 mt-5"
+      className="max-w-screen-lg mx-auto px-4 lg:px-0 flex flex-col gap-4 mt-5 scroll-mt-24"
     >
       {dummyData.map(({ url, shortened }) => (
         <URLCard key={url} url={url} shortened={shortened} />

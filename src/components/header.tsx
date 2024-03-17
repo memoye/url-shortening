@@ -5,6 +5,7 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   function toggleNav() {
+    document.body.classList.toggle("overflow-y-hidden");
     setNavOpen((prev) => !prev);
   }
 
@@ -17,7 +18,15 @@ const Header = () => {
           className={`fixed inset-x-0 mx-auto flex max-w-screen-lg items-center justify-between px-4 lg:py-8 py-5 text-white md:gap-8 md:px-4 lg:px-0 md:text-neutral-200 md:-mt-4 lg:-mt-0`}
         >
           {/* logo */}
-          <a href="#" className="hover:opacity-80 md:min-w-24">
+          <a
+            href="#"
+            className="hover:opacity-80 md:min-w-24"
+            onClick={() => {
+              if (navOpen) {
+                toggleNav();
+              }
+            }}
+          >
             <img className="w-full" src="images/logo.svg" alt="Shortly" />
           </a>
 
@@ -39,7 +48,15 @@ const Header = () => {
                       "text-[0.8rem] font-bold capitalize hover:text-neutral-300"
                     }
                   >
-                    <a className="active:text-primary" href={`#${i}`}>
+                    <a
+                      className="active:text-primary focus:text-primary visited:text-white md:visited:text-neutral-200"
+                      href={`#${i}`}
+                      onClick={() => {
+                        if (navOpen) {
+                          toggleNav();
+                        }
+                      }}
+                    >
                       {i}
                     </a>
                   </li>
@@ -86,10 +103,10 @@ const Header = () => {
       {/* close nav if you click outside */}
       {navOpen && (
         <button
-          className="fixed inset-0 z-10 bg-transparent md:hidden bg-error"
+          className="fixed inset-0 z-20 bg-transparent backdrop-blur-[1px] md:hidden bg-error"
           aria-label="close navigation"
           type="button"
-          onClick={() => setNavOpen(false)}
+          onClick={toggleNav}
         />
       )}
     </>

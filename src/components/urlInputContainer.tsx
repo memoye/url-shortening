@@ -8,7 +8,6 @@ const URLInputContainer: React.FC<URLInputContainerProps> = ({
   className,
   ...props
 }) => {
-  // const [value, setValue] = useState("");
   const [error, setError] = useState("");
 
   async function handleSubmit(
@@ -22,7 +21,22 @@ const URLInputContainer: React.FC<URLInputContainerProps> = ({
     // output as an object
     const values = Object.fromEntries(formData);
 
-    if (error) {
+    const fields = Object.keys(values);
+
+    fields.forEach((field) => {
+      const inputField = document.querySelector(
+        `input[name='${field}']`
+      ) as HTMLInputElement;
+
+      inputField.focus();
+      inputField.blur();
+    });
+
+    if (error || values.url === "") {
+      if (values.url === "") {
+        setError("Please add a link");
+        return console.error(`Error: Please add a link`);
+      }
       return console.error(`Error: ${error}`);
     }
 
@@ -30,14 +44,17 @@ const URLInputContainer: React.FC<URLInputContainerProps> = ({
   }
 
   return (
-    <form onSubmit={handleSubmit} name="urlForm" className=" px-4 h-28 md:h-14">
+    <form
+      id="link-shortening"
+      onSubmit={handleSubmit}
+      className=" px-4 h-28 md:h-14 scroll-mt-40"
+    >
       <div
-        className={`-translate-y-20 md:-translate-y-[3.65rem]  gap-8 bg-center max-w-screen-lg bg-accent rounded-lg p-8 lg:px-10 mx-auto flex flex-col md:flex-row justify-center items-start md:gap-4 bg-shorten-mobile md:bg-shorten-desktop bg-no-repeat bg-cover box-border   ${className}`}
+        className={`-translate-y-20 md:-translate-y-[3.65rem]  gap-8 bg-center max-w-screen-lg bg-accent rounded-lg p-8 lg:px-10 mx-auto flex flex-col md:flex-row justify-center items-start md:gap-4 bg-shorten-mobile md:bg-shorten-desktop bg-no-repeat bg-cover box-border ${className}`}
         {...props}
       >
         <TextInput
           name="url"
-          // setValue={setValue}
           error={error}
           setError={setError}
           validateFn={(value: string) => [
