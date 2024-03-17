@@ -12,13 +12,13 @@ const Button: React.FC<ButtonProps> = ({
   className,
   ...props
 }) => {
-  const classNames = `text-center font-bold transition duration-300 hover:opacity-60 ${
+  const classNames = `text-center font-bold transition disabled:opacity-40 disabled:cursor-not-allowed duration-300 hover:brightness-[120%] truncate ${
     fill === "dark"
       ? "bg-accent text-white"
       : fill === "light"
         ? "bg-primary text-white"
         : ""
-  } ${size === "big" ? "px-2 py-1" : "text-[0.8rem] px-5 py-2"} ${
+  } ${size === "big" ? "py-3 px-8" : "text-[0.8rem] px-5 py-2"} ${
     shape === "round" ? "rounded-full" : "rounded-md"
   } ${className}`;
 

@@ -13,5 +13,29 @@
     --error: 244, 98, 98;
     --white: 255, 255, 255;
     --black: 0, 0, 0;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: rgba(var(--primary), 0.7);
+    color: white;
+  }
+
+  /* Customize the scrollbar width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    border: 2px solid rgba(var(--neutral-100), 0.1);
+    box-sizing: content-box;
+  }
+
+  /* Customize the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: rgba(var(--neutral-200), 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* Customize the scrollbar thumb */
+    background: rgb(var(--primary));
+    border-radius: 10px;
   }
 }
