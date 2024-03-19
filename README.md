@@ -35,6 +35,8 @@ Users should be able to:
 | ![](./_starter_files/solution/desktop-demo.gif) | ![](./_starter_files/solution/mobile-demo.gif) |
 |                                                 |                                                |
 
+_\* These are going to take a while to load, might as well just visit the live site below_
+
 ### Links
 
 - Solution URL: [on Frontend Mentor](https://www.frontendmentor.io/solutions/url-shortening-api-landing-page-BSt5i3Bc7M)
