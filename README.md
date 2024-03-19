@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [on Frontend Mentor](https://www.frontendmentor.io/solutions/url-shortening-api-landing-page-BSt5i3Bc7M)
+- Live Site URL: [on Vercel](https://url-shortening-iota-eight.vercel.app/)
 
 ## My process
 
