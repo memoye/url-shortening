@@ -45,11 +45,11 @@ const Header = () => {
                   <li
                     key={i}
                     className={
-                      "text-[0.8rem] font-bold capitalize hover:text-neutral-300"
+                      "text-[0.8rem] font-bold capitalize hover:text-neutral-400"
                     }
                   >
                     <a
-                      className="active:text-primary focus:text-primary visited:text-white md:visited:text-neutral-200"
+                      className="active:text-primary focus:text-primary visited:text-white md:visited:text-neutral-200 md:visited:hover:text-neutral-400 hover:text-accent"
                       href={`#${i}`}
                       onClick={() => {
                         if (navOpen) {
