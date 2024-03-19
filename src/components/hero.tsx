@@ -17,7 +17,7 @@ const Hero = () => {
           </p>
           <a href="#link-shortening">
             <Button
-              className="mt-6 md:mt-8"
+              className="mt-6 md:mt-8 hover:bg-opacity-60"
               shape="round"
               fill="light"
               size="big"

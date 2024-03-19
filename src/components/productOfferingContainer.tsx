@@ -30,7 +30,6 @@ const ProductOfferingContainer = () => {
     <section id="features" className="scroll-mt-16">
       <div className="py-12">
         <div className="relative max-w-screen-lg gap-14 lg:gap-6 mx-auto mt-10 px-4 lg:px-0 flex flex-col lg:flex-row min-h-[19rem] items-center  lg:[&>*:last-child]:self-end lg:[&>*:first-child]:self-start before:content-[''] before:z-0 before:bg-primary before:absolute before:inset-y-0 before:w-2 before:left-1/2 max-md:before:-translate-x-1/2 lg:before:w-[unset] lg:before:inset-x-0 lg:before:top-1/2 lg:before:-translate-y-1/2 lg:before:h-2 ">
-          {/* <div className="absolute"></div> */}
           {offerings.map((offer) => (
             <ProductOfferingCard key={offer.id} {...offer} />
           ))}
@@ -41,7 +40,12 @@ const ProductOfferingContainer = () => {
           Boost your links today
         </p>
         <a href="#link-shortening">
-          <Button shape="round" fill="light" size="big">
+          <Button
+            className="hover:bg-opacity-60"
+            shape="round"
+            fill="light"
+            size="big"
+          >
             Get Started
           </Button>
         </a>

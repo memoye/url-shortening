@@ -6,13 +6,14 @@ type Validations = {
 }[];
 
 type TextInputProps = {
-  validateFn: (value: string) => Validations;
+  name: string;
+  type?: string;
   className?: string;
   placeholder?: string;
-  name: string;
   // value: string;
   // setValue: React.Dispatch<React.SetStateAction<string>>;
   error: string;
+  validateFn: (value: string) => Validations;
   setError: React.Dispatch<React.SetStateAction<string>>;
 };
 
@@ -22,6 +23,7 @@ const TextInput: React.FC<TextInputProps> = ({
   name,
   placeholder,
   setError,
+  type,
   error,
 }) => {
   const [isTouched, setIsTouched] = useState(false);
@@ -54,7 +56,7 @@ const TextInput: React.FC<TextInputProps> = ({
       className={`bg-white relative min-h-12 rounded-md ${className} ${error && isTouched ? "border-2 border-error" : ""}`}
     >
       <input
-        type="url"
+        type={type}
         name={name}
         onInput={handleChange}
         onBlur={handleBlur}

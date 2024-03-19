@@ -40,6 +40,20 @@ export default {
         "boost-mobile": "url('images/bg-boost-mobile.svg')",
         "boost-desktop": "url('images/bg-boost-desktop.svg')",
       },
+      keyframes: {
+        slideUp: {
+          from: { transform: "translateY(2rem)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+        slideDown: {
+          from: { transform: "translateY(-2rem)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        climb: "slideUp 0.3s ease-in forwards",
+        drop: "slideDown 0.3s ease-in forwards",
+      },
     },
   },
   plugins: [

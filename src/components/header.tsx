@@ -65,8 +65,14 @@ const Header = () => {
             </menu>
             <hr className="mx-auto mb-4 mt-6 opacity-20" />
             <div className="flex flex-col items-center gap-3 px-1 md:flex-row md:gap-2 md:px-0">
-              <Button shape="round">Login</Button>
-              <Button className="w-full md:w-fit" shape="round" fill="light">
+              <Button className="hover:text-accent" shape="round">
+                Login
+              </Button>
+              <Button
+                className="hover:bg-opacity-60 w-full md:w-fit"
+                shape="round"
+                fill="light"
+              >
                 Sign Up
               </Button>
             </div>

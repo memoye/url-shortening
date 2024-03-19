@@ -12,9 +12,9 @@ const Button: React.FC<ButtonProps> = ({
   className,
   ...props
 }) => {
-  const classNames = `text-center font-bold transition disabled:opacity-40 disabled:cursor-not-allowed duration-300 hover:brightness-[120%] truncate ${
+  const classNames = `text-center font-bold transition disabled:opacity-40 disabled:cursor-not-allowed duration-300  truncate ${
     fill === "dark"
-      ? "bg-accent text-white"
+      ? "bg-accent text-white hover:bg-opacity-100 opacity-100"
       : fill === "light"
         ? "bg-primary text-white"
         : ""
