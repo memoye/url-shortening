@@ -62,12 +62,15 @@ I tried SWR for fetching for the first time. I must say, pretty neat!
 I had a really terrible experience with [cleanuri](https://cleanuri.com/docs). I spent so much time trying to make it work.
 
 I was getting a successful `200` status code in the browser `Networks` tab (shown below);
+
 ![](./_starter_files/solution/cleanuri-headers.png)
 
 The "Response" tab showed this;
+
 ![](./_starter_files/solution/cleanuri-response_network.png)
 
 and when I log the response to the console, I get this;
+
 ![](./_starter_files/solution/cleanuri-response_console.png)
 
 I tried using `fetch` with `useEffect` (no SWR) - no luck, I tried `axios` - nothing!
