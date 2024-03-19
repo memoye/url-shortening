@@ -47,67 +47,41 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
+- [Tailwind](https://tailwindcss.com/) - CSS Framework
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [SWR](https://swr.vercel.app/) - React Hooks for Data Fetching
+- [Typescript](https://www.typescriptlang.org/) - Strongly typed programming language built on JS
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I tried SWR for fetching for the first time. I must say, pretty neat!
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I had a really terrible experience with [cleanuri](https://cleanuri.com/docs). I spent so much time trying to make it work.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I was getting a successful `200` status code in the browser `Networks` tab (shown below);
+![](./_starter_files/solution/cleanuri-headers.png)
 
-### Useful resources
+The "Response" tab showed this;
+![](./_starter_files/solution/cleanuri-response_network.png)
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+and when I log the response to the console, I get this;
+![](./_starter_files/solution/cleanuri-response_console.png)
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I tried using `fetch` with `useEffect` (no SWR) - no luck, I tried `axios` - nothing!
+
+I didn't want to give up so easily.
+
+This wasted a lot of my time - almost a whole day, simply because I didn't want to admit defeat and just use another API. In the end, that's exactly what I did. I used [Shrtlnk API](https://shrtlnk.dev/developer) instead, and with [SWR](https://swr.vercel.app/), I accomplished it in about five minutes.
+
+Going forward, I think I should know when to stop and look for alternatives when something just doesn't work.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- 𝕏 - [@yourusername](https://www.twitter.com/yourusername)
-- LinkedIn -
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - _In progress_
+<!-- [Brown Memoye](#) Website in progress -->
+- Frontend Mentor - [@memoye](https://www.frontendmentor.io/profile/memoye)
+- 𝕏 - [@memoye_io](https://www.x.com/memoye_io)
+- LinkedIn - [Brown Memoye](https://www.linkedin.com/in/b-me)
