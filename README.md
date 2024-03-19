@@ -81,6 +81,8 @@ This wasted a lot of my time - almost a whole day, simply because I didn't want 
 
 Going forward, I think I should know when to stop and look for alternatives when something just doesn't work.
 
+Oh, and I think I should start writing tests for my projects too.
+
 ## Author
 
 - Website - _In progress_
