@@ -6,7 +6,7 @@ import { Link, isLink } from "../types";
 import { toast } from "react-hot-toast";
 
 export const useLinks = () => {
-  const { links, addLink } = useContext(LinkContext);
+  const { links, addLink, setLinks } = useContext(LinkContext);
 
   const {
     trigger: shortenLink,
@@ -28,12 +28,17 @@ export const useLinks = () => {
     },
   });
 
+  function clearLinks() {
+    setLinks([]);
+  }
+
   return {
     links,
     shortenLink,
     data,
     shortenLinkError,
     isMutating,
+    clearLinks,
     reset,
   };
 };
